@@ -1,0 +1,662 @@
+/* VARIABLES COLORES  (COLOCADOS EN LA ETIQUETA ROOT*/
+
+:root{
+     --mx-width: 1320px;
+     --color-text-body: #525260;
+     --color-primary: #5956e9;
+     --color-secondary:white;
+     --color-banner:#2522BA;
+     --color-text-btn:#0d6efd;
+     --color-bg-btn:#ffdc60;
+     --color-subtitle: #c75c6f;
+     --color-title:#292930;
+     --color-bg-services: #f8f8f8;
+     --color-bg-projects: #ecf2f6;
+
+    }
+
+/* ETILOS GENERALES */
+.author__img{
+    width: 50px;
+}
+
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6 rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body) ;
+}
+
+/* ESTILOS LAYOUT / ESTRUCTURA  */
+
+.layout{
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+}
+
+/* ESTILOS MENU NAVEGACION Y CABECERA DE LA WEB */
+
+.layout__menu{
+    width: 100%;
+    padding: 3.5rem 3rem;
+}
+
+.menu__navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar__logo{
+    width: 187px;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav__item{
+    position: relative;
+    margin: 0 2.4rem;
+}
+
+.nav__title{
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    color: var(--color-text-body);
+    line-height: 6rem;
+    transition: all 300ms ease-in-out;
+}
+
+.nav__icon{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.2rem;
+    color: red;
+    vertical-align: middle;
+}
+
+.nav__title:hover{
+    color: var(--color-primary);
+    font-size: 20px;
+}
+
+/* AQUI CREAMOS LA LINEA QUE SE VE CUANDO PASAMOS POR ENCIMA DEL TITLE */
+.nav__title::before{
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    opacity: 0;
+    transition: all 500ms;
+
+}
+
+.nav__title:hover::before{
+    width: 100%;
+    opacity: 1;
+}
+
+.nav__submenu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    min-width: 10rem;
+    padding: 1.5rem 1rem;
+    border-radius: 4px;
+    background-color:var(--color-secondary);
+    box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 15%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 330ms ease-in-out;
+    
+}
+
+.submenu__item{
+    opacity: 1;
+    transform: translateX(2rem);
+    transition: all 100ms ease-in-out;
+}
+
+
+/* AQUI HACEMOS QUE LOS ELEMENTOS DEL SUBMENU SE MUESTREN DE MANERA ESCALONADA Y CON UN DELAY.
+INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2 3, 4, 5, RESPECTIVAMENTE */
+.submenu__item:nth-child(1){
+    transition-delay: 100ms;
+}
+
+.submenu__item:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.submenu__item:nth-child(3){
+    transition-delay: 300ms;
+}
+
+.submenu__item:nth-child(4){
+    transition-delay: 400ms;
+}
+
+.submenu__item:nth-child(5){
+    transition-delay: 500ms;
+}
+
+
+.submenu__title{
+    display: block;
+    position: relative;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-text-body);
+    padding: 0.7rem 1.5rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+
+/* AQUI JUGAMOS CON LA OPACITY Y VIVISIBILITY PARA QUE EL SUBMENU SE MUESTRE CUANDO PASAMOS POR ENCIMA */
+.nav__item:hover>.nav__submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    left: 0;
+
+}
+
+/* CENTRAMOS LOS SUBMENUS AL HACER HOVER */
+
+.nav__item:hover .submenu__item{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* METEMOS EFECTOS HOVER Y DE TACHADO AL SUBMENU__TITLE */
+.submenu__title:hover{
+    color: var(--color-primary);
+}
+.submenu__title::after{
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: all 300ms ease-in-out;
+    background-color: red;
+}
+
+/*AHORA AL HACER HOVER Y UTILZAR EL ELEMENTO AFTER MODIFICAMOS EL COMPORTAMIENTO DEL HOVER */
+.submenu__title:hover::after{
+    width: 100%;
+}
+
+
+/* ESTILOS PARA EL BANNER */
+
+.layout__banner{
+    position: relative;
+    min-height: 60rem;
+    margin: 0 3rem;
+    padding-right: 0;
+    padding-left: 10rem;
+    padding-top: 15rem;
+    padding-bottom: 20rem;
+    border-radius: 60px;
+    overflow: hidden;
+    background-color:var(--color-banner) ;
+    z-index: 1;
+}
+
+.banner__content{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    padding: 0 1.5rem;
+    z-index: 3;
+
+}
+
+.banner__title{
+    color: var(--color-secondary);
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    animation: moveTitle 1s;
+}
+
+@keyframes moveTitle{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translate(0%);
+    }
+}
+
+
+.banner__btn{
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-text-btn);
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2.8rem 4.5rem;
+    text-transform: capitalize;
+    border-radius: 20px;
+    box-shadow: 0px 44px 84px -24px var(--color-primary);
+    transition: all 300ms ease-in-out;
+}
+   
+.banner__btn:hover{
+    background-color: var(--color-bg-btn);
+    color: var(--color-text-body);
+}
+
+.shapes__item{
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.shapes__item--shape1{
+     text-align: right;
+     top: 0;
+     right: 0;
+     animation-name: showRight;
+     animation-duration: 1s;
+}
+
+@keyframes showRight{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.shapes__item--shape2{
+    bottom: 0;
+    left: 0;
+    animation-name: showLeft;
+    animation-duration: 1s;
+}
+
+@keyframes showLeft{
+    0%{
+        transform: translateX(-50%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.shapes__item--shape3{
+    top: 34%;
+    left: 50%;
+    animation: moveShape3 20s infinite;
+}
+
+
+@keyframes moveShape3{
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    
+    40%{
+        transform: translateX(50px) translateY(-200px);
+        
+    }
+    
+    75%{
+        transform: translateX(700px) ;
+        
+    }
+    
+    100%{
+        transform: translateX(0) translateY(0);
+
+    }
+}
+    
+.shapes__item--shape4{
+    bottom: 24rem;
+    left: 45%;
+    animation: moveShape4 25s infinite;
+}
+
+@keyframes moveShape4{
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    
+    40%{
+        transform: translateX(-50px) translateY(200px);
+        
+    }
+    
+    75%{
+        transform: translateX(-500px) ;
+        
+    }
+    
+    100%{
+        transform: translateX(0) translateY(0);
+
+    }
+}
+
+.shapes__item--shape4 .shapes__img{
+    opacity: 0.5;
+    width: 7.5rem;
+}
+
+.shapes__item--shape5{
+    bottom: 12rem;
+    left: 54%;
+    animation: moveShape5 30s infinite;
+}
+
+@keyframes moveShape5{
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    
+    40%{
+        transform: translateX(50px) translateY(-200px);
+        
+    }
+    
+    75%{
+        transform: translateX(700px) ;
+        
+    }
+    
+    100%{
+        transform: translateX(0) translateY(0);
+
+    }
+}
+
+
+.shapes__item--shape6{
+    bottom: 10rem;
+    left: 40%;
+    animation: moveShape6 40s infinite;
+}
+
+@keyframes moveShape6{
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    
+    40%{
+        transform: translateX(150px) translateY(-200px);
+        
+    }
+    
+    75%{
+        transform: translateX(-800px) ;
+        
+    }
+    
+    100%{
+        transform: translateX(0) translateY(0);
+
+    }
+}
+
+
+.shapes__item--shape7{
+    top: 0;
+    right: 10rem;
+    z-index: 1;
+    animation: showTop 1s;
+}
+
+@keyframes showTop{
+    0%{
+        transform: translateY(-50%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+/* ESTILOS SECCION SERVICIOS */
+
+.layout__services{
+    position: relative;
+    z-index: 1;
+    margin: 15rem 2rem;
+    
+}
+
+.services__grid{
+    max-width: 1320px;
+    margin: 0 auto;
+
+}
+
+.services__header{
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.services__subtitle,.projects__subtitle{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--color-subtitle);
+}
+
+.services__title,.projects__title{
+    color: var(--color-title);
+    font-size: 6.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.services__list{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    
+}
+
+.services__service{
+    height: 100%;
+   width: 33.333%;
+   padding: 5rem 4rem;
+   padding-bottom: 5rem;
+   margin-bottom: 4rem;
+   border-radius: 3rem;
+   background: linear-gradient(180deg, #f8f8f8,rgb(199, 199, 199));
+   background-color: var(--color-secondary);
+   border-image-source: linear-gradient(180deg, #f8f8f8,rgb(199, 199, 199)) ;
+   transition: all 300ms ease-in-out;
+   display: flex;
+   flex-direction: row;
+}
+
+.services__service:hover{
+    background:#d3e4d6;
+
+}
+.services__container-img{
+    
+    margin-right: 2.5rem;
+    max-width: 8.5rem;
+    flex: 1;
+
+}
+.service__content{
+    flex:1;
+}
+
+.service__title{
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    line-height: 1.4rem;
+    color: var(--color-title);
+}
+
+.service__description{
+    overflow: hidden;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+
+}
+.service__more{
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    padding-left: 5rem;
+    transition: all 300ms ease-in-out;  
+    font-size: 2.4rem;
+}
+
+.service__more::before{
+    content: "";
+    width: 3rem;
+    height: 2px;
+    background-color: var(--color-text-body);
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.service__more:hover,.service__title:hover{
+    color: var(--color-primary);
+}
+.service__more:hover.service__more::before{
+    background: var(--color-primary);
+}
+
+/* ESCALONADO DE LAS TARJETAS DE SERVICIOS */
+.services__service--bottom{
+    margin-top: 20rem;
+}
+
+.services__service--middle{
+    margin-top: 15rem;
+}
+
+.services__service--top{
+    margin-top: 20;
+}
+
+/* FORMAS DTRAS DE LOS SERVICIOS */
+
+.service-shapes__item {
+    z-index: -1;
+    position: absolute;
+    pointer-events: none;
+}
+
+.service_shapes--shape1{
+    top: -70px;
+    right: 380px;
+}
+.service_shapes--shape2{
+    top: 80px;
+    left: 900px;
+}
+.service_shapes--shape3{
+    top: 250px;
+    left: 400px;
+}
+
+/* ESTILOS DE PROYECTOS */
+.layout__projects{  
+    position: relative;
+    background-color: var(--color-bg-projects);
+    padding: 14rem 10rem;
+    z-index: 1;
+}
+
+.projects__grid{
+    max-width: var(--mx-width);
+    margin: 0 auto;
+    
+}
+
+.projects__header{
+    margin-bottom: 4rem;
+
+}
+
+.projects__subtitle{
+    text-transform: capitalize;
+}
+
+.projects__categories{
+    margin-bottom: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.categories__item{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.8rem 0;
+}
+
+.categories__item--active{
+    border-bottom: solid 4px var(--color-primary);
+}
+
+.projects__all{ 
+    display: flex;
+    flex-direction: row;
+    }
+    flex-wrap: wrap;
+    gap: 4rem 7rem;
+
+.project__container-img{
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    overflow: hidden;
+
+}
+
+.project__img{
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.projects__project:hover .project__img{
+    scale: 1.3;
+}
