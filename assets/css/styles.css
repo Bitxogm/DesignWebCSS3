@@ -473,14 +473,14 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     text-align: left;
 }
 
-.services__subtitle,.projects__subtitle,.stats__subtitle,.reviews__subtitle{
+.services__subtitle,.projects__subtitle,.stats__subtitle,.reviews__subtitle,.clients__subtitle,.news__subtitle{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
     color: var(--color-subtitle);
 }
 
-.services__title,.projects__title,.stats__title,.reviews__title{
+.services__title,.projects__title,.stats__title,.reviews__title,.news__title{
     color: var(--color-title);
     font-size: 6.7rem;
     font-weight: 600;
@@ -532,7 +532,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     color: var(--color-title);
 }
 
-.service__description{
+.service__descriptio{
     overflow: hidden;
     margin-bottom: 4rem;
     font-size: 1.6rem;
@@ -712,12 +712,12 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 
 /* ESTILOS PARA ESTADISTICAS */
 
-.layout__stats{
+.layout__stats,.layout__clients{
     background-color: var(--color-bg-dark);
     padding: 14rem 11rem;
 }
 
-.stats__container{
+.stats__container, .clients__container{
     max-width: var(--mx-width);
     margin: 0 auto;
 }
@@ -727,12 +727,12 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 
 }
 
-.stats__title{
+.stats__title,.clients__title{
     color: var(--color-bg-services);
     font-size: 6.5rem;
     margin-bottom: 3rem;
 }
-.stats__description{
+.stats__description,.clients__description{
     font-size: 2.2rem;
     width: 50%;
     margin: 0 auto;
@@ -820,19 +820,21 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     display: flex;
     align-items: center;
     flex-direction: row;
+    gap: 2rem;
 }
 
 .author__container-img{
     border-radius: 3.5rem;
     overflow: hidden;
+    
 }
 .author__content{
     flex: 1;
 }
 .author__name{
     display: block;
-    font-weight: 500;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 5rem;
     color: var(--color-bg-dark);
     margin-bottom: 0.3rem;
 }
@@ -842,21 +844,102 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     font-size: 1.4rem;
     color: var(--color-title);
 }
+.author__img{
+    border: 2px solid red;
+    width: 10rem;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    opacity: 0.3;
+    transition: all 300ms ease-in-out;
+}
+.author__container-img:hover >.author__img{
+    opacity: 1;
+    filter: grayscale(0);
+    cursor: pointer;
+
+}
+
+.review-shapes__item{
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 140px;
+    right: 30%;
+}
 
 
+/* ESTILOS EXCLUSIVOS MEJOREES CLIENTEEEES */
+
+.layout__clients{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12reem;
+}
+
+.clients__header{
+    text-align: left;
+}
+
+.clients__title{
+    width: 50%;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.clients__description{
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.clients__logos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.clients__item{
+    width:calc(25% -3rem);
+}
+
+.clients__img{
+    filter: grayscale(100%);
+    opacity: 0.3;
+    transition: all 300ms ease-in-out;
+}
 
 
+.clients__item:hover >.clients__img{
+    opacity: 1;
+    filter: grayscale(0);
+    cursor: pointer;
+}
+.client-shapes__item{
+    position: absolute;
+    z-index: -1;
+    top: 10rem;
+    right: 0;
+}
 
+/* ESTILOS ULTIMAS NOTICIAS */
+.layout__news{
+    position: relative;
+    z-index: 1;
+    padding: 14rem 0;
 
-
-
-
-
-
-
-
-
-
+}
+.news__container{
+    max-width: var(--mx-width);
+    margin: 0 auto;
+}
+.news__header{
+    text-align: center;
+    margin-bottom: 6rem;
+   
+}
+.news__description{
+    font-size: 3rem;
+    padding: 2rem;
+}
 
 
 
