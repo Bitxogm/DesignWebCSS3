@@ -15,6 +15,7 @@
      --color-bg-dark: #27272e;
      --color-description: #9b9baf;
      --color-hover-dark: #303035;
+     --color-borders: #99a1aa;
     }
 
 /* ESTILOS GENERALES */
@@ -856,6 +857,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     opacity: 1;
     filter: grayscale(0);
     cursor: pointer;
+    transform: scale(1.2);
 
 }
 
@@ -940,13 +942,142 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     font-size: 3rem;
     padding: 2rem;
 }
+.news__list{
+    display: flex;
+}
+
+.news__new{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-top: 3px solid var(--color-borders);
+    border-bottom: 1px solid var(--color-borders);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 0;
+    transition: all 300ms ease-in-out;
+}
+.news__new:hover{
+    border-top-color: var(--color-primary);
+}
+
+.news__new:last-child{
+    border-left: 1px solid var(--color-borders);
+    padding-left:2.5rem ;
+}
+.new__container-img{
+    overflow: hidden;
+    border-radius: 3rem;
+}
+.new__img{
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+}
+
+.news__new:hover .new__img{
+    transform: scale(1.1);
+}
+.new__content{
+    flex: 1;
+}
+.new__title{
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--color-title);
+    margin-bottom: 2rem;
+    transition: all 300ms ease-in-out;
+    
+}
+
+.new__title:hover, .new__more:hover{
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+.new_description{
+    color: var(--color-text-body);
+    margin-bottom: 4rem;
+    font-weight: 800;
+    font-size: small;
+
+}
+
+.new__more{
+    font-weight: 800;
+    color: var(--color-bg-dark);
+    display: inline-block;
+    font-size: 1.7;
+    transition: all 300ms ease-in-out;
+}
+.new__icon{
+    font-size: 1.2rem;
+    vertical-align: middle;
+
+}
+
+.new-shapes__item{
+    position: absolute;
+    z-index: -1;
+}
+
+.new-shapes--shape1{
+    
+    top: 75rem;
+    left: 150rem;
+}
+
+.new-shapes--shape2{
+    
+    top: 43rem;
+    left: 0;
+}
+.new-shapes--shape3{
+    
+    top: 10rem;
+    left: 100px;
+}
+.new-shapes--shape4{
+    
+    top: 26rem;
+    left: 30rem;
+}
+/* ESTILOS DE CONTACTOS */
+
+.layout__contact{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 14rem;
+    background-color: var(--color-primary);
+    padding-bottom: 10rem;
+}
+
+.contact__container{
+    max-width: var(--mx-width);
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.contact__header{
+    margin-bottom: 6.5rem;
+    text-align: center;
+}
+
+.contact__subtitle{
+    font-size: 2rem;
+    color: var(--color-bg-btn);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+.contact__title{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    color: var(--color-secondary);
+    margin-bottom: 5.5rem;
 
 
-
-
-
-
-
-
-
-
+}
