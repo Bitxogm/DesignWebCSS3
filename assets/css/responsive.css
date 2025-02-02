@@ -107,6 +107,158 @@
     .layout__contact{
         padding-top: 10rem;
         padding-bottom: 7rem;
+    }.contact__thumb-movile{
+        position: relative;
+        left: 25rem;
     }
     
+
+    
+    
+}
+
+@media(max-width: 1000px){
+    .layout{
+        min-width: auto;
+    }
+    .layout__services{
+        padding-bottom:4rem ;
+    }
+    .navbar__nav{
+        display: none;
+    }
+    .layout__banner{
+        min-height: 100%;
+        margin: 0 3rem;
+    }
+    .banner__title{
+        font-size: 5rem;
+    }
+    .banner__btn{
+        padding: 2rem 3.5 rem;
+    }
+    .shapes__item{
+        width: 50%;
+    }
+    .banner__content{
+        width: 65%;
+
+    }
+    .reviews__grid
+    .news__container,
+    .contact__container,
+    .footer__container{
+        max-width: 72rem
+    }
+    .services__subtitle,.projects__subtitle,.stats__subtitle,.reviews__subtitle,.clients__subtitle,.news__subtitle,
+    .contact__subtitle{
+        font-size: 1.8rem;
+    
+    }
+    
+    .services__title,.projects__title,.stats__title,.reviews__title,.news__title,.contact__title{
+    font-size: 5rem;
+    }
+    .services__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .services__service{
+        width: 96%;
+        padding: 4rem 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .service_shapes--shape2{
+        top: 80px;
+        left: 600px;
+    }
+    .service_shapes--shape3{
+        top: 80px;
+        left: 400px;
+    }
+    .layout__projects{
+        padding: 8rem 4rem;
+
+    }
+    .layout__clients, .layout__stats{
+        padding: 8rem 5rem ;
+    }
+    .stats__description, .clients__description{
+        font-size: 1.7rem;
+        width: 100%;
+    } 
+    .stats__progress{
+      flex-direction: column;
+      align-items: center;
+    
+    }
+    .layout__reviews{
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+    }
+    .review__description, .news__description{
+        width: 100%;
+        font-size: 1.7rem;
+    }
+    .reviews__container{
+        flex-direction: column;
+        padding: 3rem 5rem;
+    }
+    .reviews__header{
+        padding: 5rem;
+    }
+    .reviews__description{
+        text-align: center;
+    }
+    .clients__title{
+        width: 100%;
+        font-size: 5rem;
+    }
+    .clients__logos{
+        flex-wrap: wrap;
+
+    }
+    .clients__item{
+        width: calc(50% -3rem);
+    }
+
+    .layout__news{
+        padding: 8rem 0;
+    }
+
+    .layout__contact{
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    }
+    .layout__contact::before{
+        height: 60rem;
+    }
+    .contact__title{
+        width: 100%;
+    }
+    .contact__btn{
+        padding: 1.8rem 3.5rem;
+    }
+    .contact__thumb-chat{
+        margin-right: -13rem;
+        margin-bottom: -0.8rem;
+        width: 70%;
+    }
+    .contact__thumb-laptop{
+        left: 0;
+    }
+
+    .contact__container{
+        width: 100%;
+    }
+    .social__img{
+        font-size: 2rem;
+    }
+    .footer__main{
+        flex-direction: column;
+    }
+    .footer__fright, .footer__fleft{
+        width: 100%;
+    }
 }
