@@ -649,7 +649,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 4rem 7rem;
+    gap: 14rem 7rem;
 }
 
 .projects__project{
