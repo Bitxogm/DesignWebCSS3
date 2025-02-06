@@ -113,7 +113,10 @@
         position: relative;
         left: 25rem;
     }
-    
+    .menu-mobile{
+        visibility: hidden;
+        opacity: 0;
+    }
 
     
     
@@ -128,6 +131,9 @@
     }
     .navbar__nav{
         display: none;
+    }
+    .navbar__mobile-btn{
+        display: block;
     }
     .layout__banner{
         min-height: 100%;
