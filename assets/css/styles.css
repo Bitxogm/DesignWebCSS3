@@ -1451,7 +1451,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     opacity: 0;
     position: fixed;
     z-index: 10;
-    left: -300;
+    left: -300px;
     width: 30rem;
     height: 100%;
     background-color: var(--color-secondary);

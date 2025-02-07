@@ -113,13 +113,12 @@
         position: relative;
         left: 25rem;
     }
+    
+}
+@media(min-width : 1001px){
     .menu-mobile{
-        visibility: hidden;
-        opacity: 0;
+        display: none;
     }
-
-    
-    
 }
 
 @media(max-width: 1000px){
