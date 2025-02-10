@@ -1,0 +1,138 @@
+:root{
+    --mx-width: 1320px;
+    --color-text-body: #D3D3D4;
+    --color-primary: #5956e9;
+    --color-secondary:#D3D3D4;
+    --color-banner:#27272E;
+    --color-text-btn:#fff;
+    --color-bg-btn:#2522ba;
+    --color-subtitle: #c75c6f;
+    --color-title:#D3D3D4;
+    --color-bg-services: #27272E;
+    --color-bg-projects: #292930;
+    --color-bg-dark: #27272e;
+    --color-description: #9b9baf;
+    --color-hover-dark: #FFdc60;
+    --color-borders: #393940;
+ 
+
+}
+body{
+    background-color: #212121;
+}
+
+
+.banner__btn{
+    color: var(--color-primary);
+
+}
+.banner__btn:hover{
+    background-color: var(--color-hover-dark);
+    color: var(--color-bg-dark);
+}
+
+
+.menu__navbar--fixed{
+    background-color:var(--color-banner);
+
+}
+.project__content{
+    background-color: var(--color-banner);
+}
+
+.layout__contact::before{
+    background-color: var(--color-banner);
+
+}
+.contact__subtitle{
+    color: var(--color-hover-dark);
+}
+.contact__btn{
+    background-color: var(--color-primary);
+}
+
+.fleft__group{
+    background-color: #313131;
+    box-shadow: none;
+}
+.fleft__form-control{
+    background-color: #5e5b5b;
+}
+
+
+.copyright__text {
+    color: var(--color-secondary);
+}
+.footer__bitxo{
+    color: var(--color-hover-dark);
+}
+.nav__submenu{
+    background-color: var(--color-banner);
+}
+.nav__title{
+    color: var(--color-secondary);
+}
+.nav__title:hover{
+    color: var(--color-hover-dark);
+}
+.nav__title::before{
+    background-color: var(--color-secondary);
+}
+.nav__icon::before{
+    color: var(--color-secondary);
+}
+
+.submenu__title:hover{
+    color: var(--color-secondary);
+}
+.submenu__title::after{
+    background-color: var(--color-secondary);
+}
+
+.services__service{
+    background-color: var(--color-banner);
+    background: var(--color-banner);
+}
+.services__service:hover{
+    background-color: var(--color-borders);
+}
+.service__content{
+    color: var(--color-secondary);
+}
+.service__content, .service__link, .service__more{
+    color: var(--color-secondary);
+}
+.service__more:hover{
+    color: var(--color-secondary);
+}
+.project__title:hover{
+    color: var(--color-hover-dark);
+}
+.categories__item:hover{
+    color: var(--color-hover-dark)
+}
+.review__description, .author__name{
+    color: var(--color-description);
+}
+.new__more{
+    color: var(--color-description);
+}
+.new__more:hover{
+    color: var(--color-hover-dark);
+}
+.widget__link:hover{
+    color: var(--color-hover-dark);
+}
+.fleft__btn:hover{
+    background-color: var(--color-hover-dark);
+}
+.flinks__title:hover{
+
+    color: var(--color-hover-dark);
+}
+.navbar__logo{
+    background-color: var(--color-hover-dark);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    
+}
