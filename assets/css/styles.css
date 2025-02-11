@@ -24,7 +24,8 @@
 }
 
 html{
-    font-size: 10px;
+    /* Equivalente a 10px */
+    font-size: 62.5%; 
     overflow-x: hidden;
 }
 
