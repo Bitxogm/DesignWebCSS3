@@ -79,6 +79,10 @@ body{
     background-color: #5e5b5b;
 }
 
+.fleft__form-control::placeholder{
+    color: #fff;
+}
+
 
 .copyright__text {
     color: var(--color-secondary);
