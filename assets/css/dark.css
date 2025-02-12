@@ -36,6 +36,26 @@ body{
     background-color:var(--color-banner);
 
 }
+.mobile-btn__wrap{
+    background-color: var(--color-hover-dark);
+}
+.mobile-btn__line{
+    background-color: #212121;
+}
+.menu-mobile__close{
+    background-color: var(--color-hover-dark);
+}
+.menu-mobile__icon-close{
+    color:var(--color-bg-dark)
+}
+.menu-mobile{
+    background-color: var(--color-banner);
+}
+.menu-mobile__logo{
+    background-color: var(--color-hover-dark);
+    border-radius: 1.5rem;
+}
+
 .project__content{
     background-color: var(--color-banner);
 }
