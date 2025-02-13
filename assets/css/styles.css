@@ -32,7 +32,8 @@ html{
 body{
     width: 100%;
     height: 100%;
-    font-size: 1.6 rem;
+    /* El intérprete del Css(el navegador) suele tener en cuenta los espacios, aqui no te está cogiendo este font-size (y por eso se ve muy pequeño el menu dcho) por el espacio, tiene que ser 1.6rem, no 1.6 rem. Te ha pasado en otros lados tmb*/
+    font-size: 1.6rem;
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -470,7 +471,8 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     position: relative;
     z-index: 1;
     margin: 15rem 10rem;
-    margin-bottom: 5reem;
+    /* esta regla se la fuma tmb, no entiende esa medida */
+    margin-bottom: 5rem;
     
 }
 
@@ -533,7 +535,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 
 }
 .service__content{
-    flex:1;
+    flex: 1;
 }
 
 .service__title{
@@ -587,7 +589,8 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 }
 
 .services__service--top{
-    margin-top: 20;
+    /* no tiene medida */
+    margin-top: 20px;
 }
 
 /* FORMAS DTRAS DE LOS SERVICIOS */
@@ -664,7 +667,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 }
 
 .projects__project{
- width: calc(50% -3.5rem);
+ width: calc(50% - 3.5rem);
  text-align: center;
 ;
 }
@@ -761,7 +764,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 .stats__progress{
     display: flex;
     flex-direction: row;
-    gap:3rem;
+    gap: 3rem;
 }
 .stats__stat{
     width: 25%;
@@ -794,7 +797,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 .layout__reviews{
     position: relative;
     z-index: 1;
-    padding-top:14rem ;
+    padding-top: 14rem ;
     padding-bottom: 10rem;
 }
 
@@ -892,7 +895,8 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 .layout__clients{
     position: relative;
     z-index: 1;
-    padding-bottom: 12reem;
+    /* otro typo */
+    padding-bottom: 12rem;
 }
 
 .clients__header{
@@ -980,7 +984,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 
 .news__new:last-child{
     border-left: 1px solid var(--color-borders);
-    padding-left:2.5rem ;
+    padding-left: 2.5rem ;
 }
 .new__container-img{
     overflow: hidden;
@@ -1038,28 +1042,26 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 }
 
 .new-shapes--shape1{
-    
     top: 75rem;
     left: 150rem;
 }
 
 .new-shapes--shape2{
-    
     top: 43rem;
     left: 0;
 }
+
 .new-shapes--shape3{
-    
     top: 10rem;
     left: 100px;
 }
+
 .new-shapes--shape4{
-    
     top: 26rem;
     left: 30rem;
 }
-/* ESTILOS DE CONTACTOS */
 
+/* ESTILOS DE CONTACTOS */
 .layout__contact{
     position: relative;
     z-index: 1;
@@ -1212,8 +1214,6 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 
 .layout__footer{
     padding-top: 1rem;
-
-
 }
 
 .footer__container{
@@ -1253,9 +1253,10 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
  .footer__fleft{
     flex-basis: 50%;
  }   
- .fleft__container{
+ .fleft__container {
     border-right: 1px solid var(--color-borders);
-    padding-right: rem;
+    /* no tiene medida */
+    padding-right: 4rem;
     margin-right: 4rem;
     margin-bottom: 8rem;
 
@@ -1264,7 +1265,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 .fleft__title{
     display: inline-block;
     font-size: 6.4rem;
-    line-height: 1,2;
+    line-height: 1.2;
     font-weight: 500;
     margin-bottom: 2rem;
     color: var(--color-title);
@@ -1314,6 +1315,9 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     padding: 2rem 3rem;
     transition: all 300ms ease-in-out;
     height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -1352,7 +1356,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     font-weight: 700;
     color: var(--color-title);
     margin-bottom: 2rem;
-    margin:3rem;
+    margin: 3rem;
 }
 
 
@@ -1376,7 +1380,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 }
 
 .footer__copyright{
-    flex-basis:50% ;
+    flex-basis: 50%;
 }
 
 .copyright__text{
@@ -1508,7 +1512,7 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
     justify-content: space-between;
     color: var(--color-text-body);
     font-weight: 500;
-    margin: 0.7rem 1 rem;
+    margin: 0.7rem 1rem;
     font-size: 1.4rem;
     font-weight: 800;
     text-transform:capitalize;
@@ -1580,27 +1584,3 @@ INDICAMOS EL TIEMPO Y CON LA PSEUDO-CLASE NTH-CHILD(1) INDICAMOS EL HIJO EL 1 ,2
 .switcher__icon-dark{
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
